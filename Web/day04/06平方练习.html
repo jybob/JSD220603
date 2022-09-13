@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text">
+<input type="button" value="平方" onclick="f()">
+<div>结果：</div>
+<script>
+  function f() {
+    let d=document.querySelector("div");
+    let i=document.querySelector("input");
+    if(isNaN(i.value)){
+        d.innerText="输入错误!";
+        return;
+    }
+    // d.innerText="结果:"+i.value*i.value;
+d.innerText="结果："+(parseFloat(i.value)+parseFloat((i.value)))
+  }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <a :href="url">超链接1</a>
+    <a v-bind:href="url">超链接2</a>
+    <img :src="imgName" alt="">
+    <input type="text" :value="info">
+</div>
+<script src="js/vue.min.js"></script>
+<script>
+    let v=new Vue({
+        el:"body>div",
+        data:{
+            url:"http://www.baidu.com",
+            imgName:"../c.gif",
+            info:"属性绑定"
+        }
+
+    })
+</script>
+</body>
+</html>

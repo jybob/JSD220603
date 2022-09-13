@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>异步请求测试</h1>
+<div>
+    <input type="text" v-model="info">
+    <input type="button" value="异步get请求" @click="f1()">
+    <input type="button" value="异步post请求" @click="f2()">
+
+    <a href="/bmi.html">身体质量指数测试</a>
+    <a href="/reg.html">注册</a>
+</div>
+<script src="https://cdn.bootcdn.net/ajax/libs/axios/0.21.1/axios.min.js"></script>
+<script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
+<script>
+    let v = new Vue({
+        el: "body>div",
+        data: {
+            info:""
+        },
+        methods: {
+            f1() {
+                axios.get("/helloAxios?info="+v.info).then(function (response) {
+                    alert(response.data);
+
+                })
+            },
+            f2(){
+                let user ={username:"tom",password:"123456",nick:"汤姆"}
+                axios.post("/postAxios",user).then(function (response){
+                    alert(response.data);
+                })
+            }
+        }
+
+    })
+</script>
+</body>
+</html>

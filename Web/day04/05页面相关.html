@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body>div{
+            border: 1px solid red;
+            width:50px;
+        }
+    </style>
+</head>
+<body>
+<div>这是div</div>
+<input type="text">
+<input type="button" value="按钮" onclick="f()">
+<script>
+    function f() {
+        let d=document.querySelector("div");
+        let i=document.querySelector("input");
+        d.innerText=i.value;
+    }
+</script>
+</body>
+</html>
